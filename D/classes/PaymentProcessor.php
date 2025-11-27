@@ -1,12 +1,12 @@
 <?php
-
+require 'PaymentGatewayInterface.php';
 class PaymentProcessor
 {
     protected $gateway;
 
-    public function __construct()
+    public function __construct( PaymentGatewayInterface $gateway )
     {
-        $this->gateway = new StripePaymentGateway();
+        $this->gateway = $gateway;
     }
 
     public function procesarPago(float $cantidad): string
