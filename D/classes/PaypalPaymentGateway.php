@@ -1,6 +1,6 @@
 <?php
-require 'PaymentGatewayInterface.php';
-class PayPalPaymentGateway implements PaymentGatewayInterface
+require 'BankTransfer.php';
+class PayPalPaymentGateway implements BankTransfer
 {
     public function sendPayment(float $amount): string
     {

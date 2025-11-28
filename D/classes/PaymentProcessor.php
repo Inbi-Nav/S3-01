@@ -1,10 +1,10 @@
 <?php
-require 'PaymentGatewayInterface.php';
+require 'BankTransfer.php';
 class PaymentProcessor
 {
     protected $gateway;
 
-    public function __construct( PaymentGatewayInterface $gateway )
+    public function __construct( BankTransfer $gateway )
     {
         $this->gateway = $gateway;
     }

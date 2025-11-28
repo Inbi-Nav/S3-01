@@ -1,5 +1,5 @@
 <?php 
-interface PaymentGatewayInterface
+interface BankTransfer
 {
     public function sendPayment(float $amount): string;
 }

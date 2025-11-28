@@ -1,7 +1,7 @@
 <?php 
-require 'PaymentGatewayInterface.php';
+require 'BankTransfer.php';
 
-class StripePaymentGateway implements PaymentGatewayInterface
+class StripePaymentGateway implements BankTransfer
 {
     public function sendPayment(float $amount): string
     {
