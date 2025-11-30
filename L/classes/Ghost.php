@@ -1,17 +1,11 @@
 <?php
 
-include('Character.php');
+include('Movable.php');
 
-class Ghost extends Character
+class Ghost implements Movable
 {
     public function move(): void
     {
         echo "The ghost floats silently.\n";
-    }
-
-    public function attack(): void
-    {
-        // Ghosts can't attack in this game
-        throw new Exception("Ghosts cannot attack!");
     }
 }

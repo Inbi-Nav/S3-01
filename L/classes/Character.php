@@ -1,6 +1,9 @@
 <?php
+require 'Movable.php';
+require 'Attackable.php';
 
-class Character
+
+class Character implements Movable, Attackable
 {
     public function move(): void
     {
