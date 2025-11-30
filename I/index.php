@@ -15,5 +15,4 @@ $washer->turnOn();
 $washer->wash();
 $washer->turnOff();
 
-
 ?>
