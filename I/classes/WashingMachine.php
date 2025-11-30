@@ -1,8 +1,11 @@
 <?php
 
-require_once 'IMachineActions.php';
+require 'TurnOnAction.php';
+require 'TurnOffAction.php';
+require 'WashAction.php';
 
-class WashingMachine implements IMachineActions
+
+class WashingMachine implements TurnOnAction, TurnOffAction, WashAction
 {
     public function turnOn(): void
     {
@@ -12,18 +15,6 @@ class WashingMachine implements IMachineActions
     public function turnOff(): void
     {
         echo "Washing machine off\n";
-    }
-
-    public function heat(): void
-    {
-        // Not supported
-        throw new Exception("Heating not supported");
-    }
-
-    public function cool(): void
-    {
-        // Not supported
-        throw new Exception("Cooling not supported");
     }
 
     public function wash(): void

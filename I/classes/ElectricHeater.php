@@ -1,8 +1,9 @@
 <?php
 
-require_once 'IMachineActions.php';
-
-class ElectricHeater implements IMachineActions
+require 'TurnOnAction.php';
+require 'TurnOffAction';
+require 'HeatAction.php';
+class ElectricHeater implements TurnOnAction,TurnOffAction, HeatAction
 {
     public function turnOn(): void
     {
@@ -19,15 +20,4 @@ class ElectricHeater implements IMachineActions
         echo "Heating the room\n";
     }
 
-    public function cool(): void
-    {
-        // Not supported
-        throw new Exception("Cooling not supported");
-    }
-
-    public function wash(): void
-    {
-        // Not supported
-        throw new Exception("Washing not supported");
-    }
 }
